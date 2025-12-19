@@ -1,0 +1,5 @@
+log_rank_*.txt
+*.swp
+*.o
+bin/
+.idea/
