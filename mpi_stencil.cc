@@ -76,8 +76,6 @@ int main(int argc, char *argv[])
             (current_data[kPointsPerRank - 1] + current_data[kPointsPerRank] + current_data[kPointsPerRank + 1]) /
             3.0;
 
-        // Now copy next_data into current_data to prep for the next loop iteration.
-        // To really optimize for speed, we could swap pointers here instead.
         std::swap(current_data, next_data);
     }
 
