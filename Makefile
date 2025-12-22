@@ -1,7 +1,7 @@
 # Compiler and Runner
 CXX = mpicxx
 RUN = mpirun
-CXXFLAGS = -Wall -O2 -std=c++11
+CXXFLAGS = -Wall -O2 -std=c++20
 
 # Project files
 TARGET = bin/mpi_stencil

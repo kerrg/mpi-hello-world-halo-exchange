@@ -29,7 +29,7 @@ namespace HaloExchangeUtils {
     /// The number of non-blocking MPI requests for the halo exchange (2 sends, 2 receives).
     constexpr size_t kMpiRequestNum = 4;
     /// A reserved MPI message tag for this simulation.
-    constexpr size_t kReservedMessageTag = 0;
+    constexpr size_t kReservedMessageTag = 2450;
     /// The number of steps (iterations) the simulation will run.
     constexpr int kNumSteps = 50;
 
@@ -53,7 +53,7 @@ namespace HaloExchangeUtils {
      * @param logfile The output file stream to write the log to.
      * @param step The current simulation step number.
      */
-    void doLogging(const std::vector<double>& current_data, std::ofstream& logfile, int step);
+    void logStepResults(const std::vector<double>& current_data, std::ofstream& logfile, int step);
 
     /**
      * @brief Initializes the data buffers for the simulation.
