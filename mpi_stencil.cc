@@ -75,11 +75,8 @@ int main(int argc, char* argv[]) {
 
     // Now that we've received the halo values, or the edges from the remote
     // nodes, we can compute our own edges.
-    next_data[1] = (current_data[0] + current_data[1] + current_data[2]) / 3.0;
-    next_data[kPointsPerRank] =
-        (current_data[kPointsPerRank - 1] + current_data[kPointsPerRank] +
-         current_data[kPointsPerRank + 1]) /
-        3.0;
+    next_data[1] = ComputeAverageAround(current_data, 1);
+    next_data[kPointsPerRank] = ComputeAverageAround(current_data, kPointsPerRank);
 
     std::swap(current_data, next_data);
   }
